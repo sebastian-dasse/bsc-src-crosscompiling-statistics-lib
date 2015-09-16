@@ -1,5 +1,3 @@
-enablePlugins(ScalaJSPlugin)            // Turn this project into a Scala.js project by importing these settings
-
 name := "statistics-lib"
 
 lazy val root = project
