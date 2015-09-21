@@ -28,11 +28,11 @@ lazy val library = crossProject
     ),
     testFrameworks += new TestFramework("utest.runner.Framework")
   ).jsSettings(
-    name := "libJS",
+    name := "statistics-lib-JS",
     scalaJSStage in Global := FastOptStage, // to use Node.js or PhantomJS for tests
     jsDependencies in Test += RuntimeDOM    // to use PhantomJS for tests
   ).jvmSettings(
-    name := "libJVM"
+    name := "statistics-lib-JVM"
     // JVM-specific settings here
   )
 

@@ -1,17 +1,16 @@
 package statistics
 
-import scala.language.implicitConversions
-
 object Statistics {
-  implicit def is2ds(is: Seq[Int]): Seq[Double] = is.map(_.toDouble)
+
+  private val errMsg = "empty list"
 
   def mean(seq: Seq[Double]): Double = {
-    require(seq.length > 0)
+    require(seq.length > 0, errMsg)
     seq.sum / seq.length
   }
 
   def median(seq: Seq[Double]): Double = {
-    require(seq.length > 0)
+    require(seq.length > 0, errMsg)
     val srtd = seq.sorted
     val lenHalf = srtd.length / 2
     srtd.length % 2 match {
@@ -21,7 +20,7 @@ object Statistics {
   }
 
   def variance(seq: Seq[Double]): Double = {
-    require(seq.length > 0)
+    require(seq.length > 0, errMsg)
     val mn = mean(seq)
     def sqr(x: Double) = x * x
     seq.map(x => sqr(x - mn)).sum / seq.length

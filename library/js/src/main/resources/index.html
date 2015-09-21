@@ -2,13 +2,28 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>"A Simple Statistics Library"</title>
+  <title>"A Website using the Simple Statistics Library"</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <script src="../statistics-lib-opt.js"></script>
-  <script>
-    /* Your main here, e.g.: */
-    // hello.HelloApp.main();
-  </script>
+  <header>
+    <h1>Simple Statistics Calculator</h1>
+  </header>
+  <form id="form">
+    <input id="input" placeholder="Enter some numbers: 1.0, 2, 3.4 ..." size="50">
+    <select id="ops" >
+      <option value="mean">Mean</option>
+      <option value="median">Median</option>
+      <option value="variance">Variance</option>
+      <option value="deviation">Deviation</option>
+    </select>
+  </form>
+  <div>
+    <p id="output">...</p>
+  </div>
+
+  <script src="../statistics-lib-js-opt.js"></script>
+  <script src="Util.js"></script>
 </body>
 </html>
