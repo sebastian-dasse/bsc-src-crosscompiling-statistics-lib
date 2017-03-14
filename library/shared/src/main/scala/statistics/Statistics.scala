@@ -28,6 +28,4 @@ object Statistics {
 
   def deviation(seq: Seq[Double]): Double = math.sqrt(variance(seq))
 
-  // TODO
-//  def quartile(seq: Seq[Double]): Double = ???
 }

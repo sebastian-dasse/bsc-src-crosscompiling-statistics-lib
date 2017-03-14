@@ -5,14 +5,26 @@ Build-setup inspired by:
 - [Scala.js documentation](http://www.scala-js.org/doc/sbt/cross-building.html)
 - [Scala.js cross compile example](https://github.com/scala-js/scalajs-cross-compile-example)
 
+## Build
+
+Run `sbt fastOptJS` in development.
+
+Run `sbt fullOptJS` for production.
+
+
+## Run application
+
+Open `library/js/target/scala-2.11/classes/index.html` in your favorite browser.
+
+
 ## Run tests
 
 Simply run `sbt test`.
 
 To run tests just on one platform, launch sbt and type one of the following:
 
-  sbt> libraryJS/test
-  sbt> libraryJVM/test
+    sbt> libraryJS/test
+    sbt> libraryJVM/test
 
 For a test run with logs run `sbt test > test.log`.
 

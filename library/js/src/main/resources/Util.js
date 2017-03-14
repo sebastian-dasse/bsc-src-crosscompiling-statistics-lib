@@ -15,24 +15,23 @@
     var input = document.getElementById("input");
     input.onkeyup = function(evt) {
       switch (evt.keyCode) {
-        case 13:
+        case 13: // enter
           var tmp = input.value
-          input.value = "";
           updateOutput(tmp);
           break;
-        case 27:
+        case 27: // escape
           input.value = "";
           break;
       }
     };
 
-    var ops = document.getElementById("ops");
-    ops.onchange = function(evt) {
-      op = ops.options[ops.selectedIndex].value;
+    var sel = document.getElementById("sel");
+    sel.onchange = function(evt) {
+      op = sel.options[sel.selectedIndex].value;
       console.log("changed")
     };
-    ops.options[0].selected = true;
-    ops.onchange();
+    sel.options[0].selected = true;
+    sel.onchange();
   };
 
   var stringToNumberArray = function(str) {
